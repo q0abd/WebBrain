@@ -34,6 +34,22 @@
 
 // console.log({ ...person1, ...person1 });
 
+const person = {
+  name: "Abd",
+};
+const student = [
+  {...person},
+  {
+    name: "Eshmat",
+  },
+  {
+    name: "toshmat",
+  },
+  {
+    name: "davron",
+  },
+];
+console.log(student);
 // /Practice
 
 // //Spread ishlatilmasiligi oqibati
@@ -69,9 +85,6 @@
 // //Shu yolda ishllash tasiya etiladi
 // const [a, b, ...other] = numbers;
 // console.log(a, b, other);
-
-
-
 
 //Bu bizda massivda Spread oeratorlarini ishlatish edi...
 //Spread
@@ -141,13 +154,12 @@ const person2 = {
 // console.log(a, b, other);
 
 function getSum(a, b, ...rest) {
-    // return a+b+rest.reduce((v,i)=>v+i,0)
+  // return a+b+rest.reduce((v,i)=>v+i,0)
 }
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 console.log(getSum(...numbers));
 
-const [num1,num2,...others] = numbers
+const [num1, num2, ...others] = numbers;
 // console.log(num1,num2,others)
-

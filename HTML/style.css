@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Kodchasan&family=Rubik&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 0 50px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-left: 150px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item {
+  margin-right: 40px;
+}
+
+.bee-wrapper {
+  background: linear-gradient(76.02deg, #ff9d2d 1.66%, #ffd877 93.21%);
+  border-radius: 30px;
+  width: 100%;
+  height: 300px;
+}

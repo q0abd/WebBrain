@@ -22,15 +22,15 @@
 //     }
 // } generatePyramid();
 
-function pyramid(n) {
-  for (let i = 1; i <= n; i++) {
-    let str = " ".repeat(n - i);
-    let str2 = "*".repeat(i * 2 - 1);
-    console.log(str + str2 + str);
-  }
-}
+// function pyramid(n) {
+//   for (let i = 1; i <= n; i++) {
+//     let str = " ".repeat(n - i);
+//     let str2 = "*".repeat(i * 2 - 1);
+//     console.log(str + str2 + str);
+//   }
+// }
 
-pyramid(10);
+// pyramid(10);
 //          *
 //         ***
 //        *****
@@ -49,14 +49,38 @@ pyramid(10);
 // ##########
 // ###    ###
 
-function getH(per) {
-  //   let str = " ";
-  //   let novo = `${per.repeat(3)}`;
-  //   let lengthi = novo.split('');
-  //   let estere =
-  //   console.log(estere);
-  //   for (let i = 0; i < 6; i++) {}
-  //   console.log((novo += lengthi.length = " "), novo);
-}
 
-getH("#");
+// x qilib yasash
+let k = 20;
+let st = "";
+let r = "";
+let x = k + 1;
+// console.log(k, x);
+for (let i = 1; i <= k; i++) {
+  if (i == k) {
+    st = "";
+  }
+  for (let j = 1; j <= k; j++) {
+    if (i == 1) {
+      r = st;
+      st = r + "#";
+    } else if (i == k) {
+      r = st;
+      st = r + "#";
+    }
+    if (j == 1 || j == k) {
+      r = r + "#";
+      st = r;
+      r = "#";
+    } else {
+      if (i == j) {
+        r = r + "#";
+      } else if (i + j == x) {
+        r = r + "#";
+      } else {
+        r = r + " ";
+      }
+    }
+  }
+  console.log(st);
+}

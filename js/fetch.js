@@ -1,44 +1,44 @@
-// const requestURL = "https://jsonplaceholder.typicode.com/users";
+const requestURL = "https://jsonplaceholder.typicode.com/users";
 
-// function sendRequest(method, url, body = null) {
-//   const header = {
-//     "Content-Type": "application/json",
-//   };
+function sendRequest(method, url, body = null) {
+  const header = {
+    "Content-Type": "application/json",
+  };
 
-//   return fetch(url, {
-//     method: method,
-//     body: JSON.stringify(body),
-//     headers: header,
-//   }).then((response) => {
-//     if (response.ok) {
-//       return response.json();
-//     } else {
-//       return response.json().then((err) => {
-//         const e = new Error("Something is wrong!");
-//         e.data = err;
-//         throw e;
-//       });
-//     }
-//   });
+  return fetch(url, {
+    method: method,
+    body: JSON.stringify(body),
+    headers: header,
+  }).then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      return response.json().then((err) => {
+        const e = new Error("Something is wrong!");
+        e.data = err;
+        throw e;
+      });
+    }
+  });
 
 // fetch orqali GET qilish
-// return fetch(url).then((response) => {
-//   return response.json();
-// });
-// }
+return fetch(url).then((response) => {
+  return response.json();
+});
+}
 
-// sendRequest("GET", requestURL)
-//   .then((data) => console.log(data))
-//   .catch((err) => console.log(err));
+sendRequest("GET", requestURL)
+  .then((data) => console.log(data))
+  .catch((err) => console.log(err));
 
-// const body = {
-//   name: "Abdulloh",
-//   age: 18,
-// };
+const body = {
+  name: "Abdulloh",
+  age: 18,
+};
 
-// sendRequest("POST", requestURL, body)
-//   .then((data) => console.log(data))
-//   .catch((err) => console.log(err));
+sendRequest("POST", requestURL, body)
+  .then((data) => console.log(data))
+  .catch((err) => console.log(err));
 
 const requestURL = "https://jsonplaceholder.typicode.com/users";
 function getFetch(method, url, body = null) {
@@ -66,3 +66,14 @@ const body = {
 getFetch("POST", requestURL, body)
   .then((res) => console.log(res))
   .catch((err) => console.log(err));
+
+function dn(x) {
+  if (x > 10) {
+    return;
+  } else {
+    console.log(x);
+    x++;
+    dn(x);
+  }
+}
+dn(1);

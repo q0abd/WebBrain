@@ -9,30 +9,30 @@ const obj = {
   age: 18,
 };
 
-// localStorage.setItem("info", obj);
-// const getter = localStorage.getItem('info')
-// const parsing = JSON.parse(getter)
-// console.log(parsing);
+localStorage.setItem("info", obj);
+const getter = localStorage.getItem('info')
+const parsing = JSON.parse(getter)
+console.log(parsing);
 
-// const toArr = Object.entries(obj);
-// console.log(toArr.length);
-// if (toArr.length == 0) {
-//     console.log(true);
-// } else {
-//     console.log(false);
-// }
+const toArr = Object.entries(obj);
+console.log(toArr.length);
+if (toArr.length == 0) {
+    console.log(true);
+} else {
+    console.log(false);
+}
 
-// const toArr = Object.entries(objectcha);
+const toArr = Object.entries(objectcha);
 
-// toArr.length == 0
-//   ? console.log(`Quyidagi object bo'sh holatda - ${true}`)
-//   : console.log(false);
+toArr.length == 0
+  ? console.log(`Quyidagi object bo'sh holatda - ${true}`)
+  : console.log(false);
 
-// if (toArr.length == 0) {
-//   console.log(`Quyidagi object bo'sh holatda - ${true}`);
-// } else {
-//   console.log(false);
-// }
+if (toArr.length == 0) {
+  console.log(`Quyidagi object bo'sh holatda - ${true}`);
+} else {
+  console.log(false);
+}
 
 const person = {
   name: "Abdulloh",
